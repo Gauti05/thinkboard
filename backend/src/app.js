@@ -25,7 +25,7 @@ app.use(express.json());
 // app.use('/api/', rateLimiter);
 // app.use('/api', rateLimiter);
 // app.use('/api/notes', noteRoutes);
-
+app.set('trust proxy', 1);
 app.use('/api', rateLimiter);        // ✅ Applies rate limiting to all /api/* routes
 app.use('/api/notes', noteRoutes);
 
